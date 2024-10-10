@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.hero {
+  height:100vh;
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: #fff;
+}
+
+.animated-text {
+  font-size: 3rem;
+  animation: text-fade-in 2s ease-in-out;
+}
+
+.cta-button {
+  padding: 2px 2px;
+  background-color: #ff4081;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.4s ease;
+}
+
+.cta-button:hover{
+  background-color: #ff79a5;
+}
+
+@keyframes text-fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.characters-section {
+  padding: 50px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  
+}
+
+.character-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.character-card img {
+  width: 80%;
+  height : 80%;
+  transition: transform 0.3s ease;
+  border-radius: 5%;
+}
+
+.character-card:hover img {
+  transform: scale(1.1);
+}
+
+.character-details {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.character-card:hover .character-details {
+  transform: translateY(0);
+}
+.carousel-section {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 200px;
+  margin-right: 20px;
+}
+.carousel-item:hover img{
+  transform: scale(1.1);
+}
+
+.carousel-item img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.carousel-item p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
